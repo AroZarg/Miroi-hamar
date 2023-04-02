@@ -1,0 +1,229 @@
+.score-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    width: 100%;
+    height: 1200px;
+    background-color: rgba(0, 0, 0, 0.918);
+}
+
+
+
+.scorecontainer {
+    
+    box-shadow: 0px 4px 16px rgba(129, 129, 136, 0.1);
+    background-color: #ffff;
+    position: absolute;
+    width: 500px !important;
+    height: auto;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.chart{
+    position: absolute;
+    width: 200px !important;
+    height: 200px !important;
+    top: 40px;
+    left: 180px;
+    backdrop-filter: blur(35.9914px);
+}
+.scoreheaderName{
+ width: 91px;
+height: 62px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 62px;
+/* identical to box height, or 194% */
+
+text-align: center;
+
+/* блацк */
+
+color: #1E2023;
+font-variation-settings: 'slnt' 0;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.scorwrap1{
+ 
+
+padding-top:80px;   
+top:305px;   
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: center;
+width: 440px;
+}
+.scorwrap2{
+    background-color:  #81B2D624;
+     margin-top: 110px; 
+    top:305px;   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 440px;
+    }
+.inputsrang{
+width: 207px;
+height: 14px;
+}
+
+.petqavor{
+   margin-right: 222px;
+   
+}
+
+.petqavor1{
+    margin-right: 30px;
+}
+
+.btn {
+    width: 340px;
+    height: 46px;
+    background: #1F2530;
+    border-radius: 10px;
+    color: #ffff;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.h3{
+    width: 212px;
+height: 18px;
+
+/* small headline */
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 18px;
+/* identical to box height, or 150% */
+
+
+/* блацк */
+
+color: #1E2023;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.paragraph{
+    width: 433px;
+    height: 18px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 18px;
+    color: #1998A0;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.Allscore{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 700px;
+}
+
+.Sss{
+    width: 144px;
+height: 18px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 18px;
+/* identical to box height, or 90% */
+
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.scpetqa123{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px
+}
+
+.header1{
+    width: 1150px;
+    margin-left: 35px;
+}
+
+
+.sccbtn{
+    cursor: pointer;
+}
+
+.sccontainerforapk{
+margin-bottom: 50px;
+width: 1150px;
+height: 54px;
+background: rgba(213, 213, 220, 0.3);
+border-radius: 12px;
+margin-left: 35px;
+display: flex;
+justify-content: space-between;
+}
+.scSss{
+width: 144px;
+height: 18px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 18px;
+/* identical to box height, or 90% */
+
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.entbtn{
+    cursor: pointer;
+}

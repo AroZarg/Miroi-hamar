@@ -212,3 +212,58 @@ cursor: pointer;
     flex-direction: row;
     align-items: center;
 }
+
+.Sss{
+    width: 144px;
+height: 18px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 18px;
+/* identical to box height, or 90% */
+
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.petqa123{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px
+}
+
+.header1{
+    width: 1150px;
+    margin-left: 35px;
+}
+
+.Allapk{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 700px;
+}
+
+.cbtn{
+    cursor: pointer;
+}
+
+.containerforapk{
+margin-bottom: 50px;
+width: 1150px;
+height: 54px;
+background: rgba(213, 213, 220, 0.3);
+border-radius: 12px;
+margin-left: 35px;
+display: flex;
+justify-content: space-between;
+}

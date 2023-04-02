@@ -1,9 +1,15 @@
-import React, { useState } from 'react';
+import * as React from 'react';
+import { useContext, useEffect, useState } from 'react' ;
 import { Link } from 'react-router-dom';
 import "./auth.css"
 import logo from "./../../img/logo.png"
 import btn from "./../../img/linkdin.png"
 import { Checkbox } from '@material-ui/core';
+import axios from 'axios'
+import { toast } from 'react-toastify'
+import { useNavigate, } from 'react-router-dom'
+import { UserContext } from '../../context/UserContext'
+import { AUTH_API_PATH } from "./apiPath";
 
 const Login = () => {
     const [username, setUsername] = useState('');
@@ -16,9 +22,25 @@ const Login = () => {
     setPassword(event.target.value);
   }
 
+  const { setUser, user } = useContext(UserContext);
+
+  const navigate = useNavigate()
+
+
   function handleSubmit(event) {
     event.preventDefault();
-    // Perform login logic here
+    if (username && password) {
+          axios.post('http://localhost:9090/api/login', {
+              username,
+              password
+          }).then((data) => {
+              setUser(data)
+              navigate('/app')
+          }).catch((error) => {
+              console.log(error)
+              toast.error(error.response.data.message);
+          })
+      }
   }
 
     return (  

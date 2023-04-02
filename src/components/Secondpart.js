@@ -1,5 +1,28 @@
+import Stepper  from '@mui/material/Stepper';
+import Step from '@mui/material/Step';
+import StepLabel from '@mui/material/StepLabel';
+const steps = [
+  'Step1',
+  'Step2',
+  'Step3',
+];
+
+
 const Secondpart = (props) => {
     return (   
+      <>
+      <div className='container'>
+      <div className='pageName'>
+      <h1 className='headerName'>Application</h1>
+      <Stepper className='steps' activeStep={1} alternativeLabel>
+        {steps.map((label) => (
+          <Step key={label}>
+            <StepLabel>{label}</StepLabel>
+          </Step>
+        ))}
+      </Stepper>
+   </div>
+  
  <form classname="form"onSubmit={props.handleAddApplication}>
     <label className="inputs">
      <span className="xs">Rounds raised</span>
@@ -40,6 +63,8 @@ const Secondpart = (props) => {
     </label>
     <button className='btn' type="submit">Next</button>
   </form>
+  </div>    
+  </>
   );
 }
  

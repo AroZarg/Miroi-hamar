@@ -9,8 +9,8 @@ function Multic() {
     <img src={logo1} className='logo1'/>
       <div className='navigate'>
        <Link className='forNavigate'>Account</Link>
-       <Link className='forNavigate'>Application</Link>
-       <Link className='forNavigate'>Score</Link>
+       <Link to = "/app" className='forNavigate'>Application</Link>
+       <Link to="/score"className='forNavigate'>Score</Link>
       </div>
       <img src={logout} className='logout'/>
 </div>

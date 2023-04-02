@@ -1,21 +1,46 @@
-import React, { useState } from 'react';
-import {  Link } from 'react-router-dom';
+import * as React from 'react';
+import {useContext, useEffect, useState} from 'react';
+import {Link,useNavigate} from 'react-router-dom';
 import "./auth.css"
 import logo from "./../../img/logo.png"
 import btn from "./../../img/linkdin.png"
 import { Checkbox } from '@material-ui/core';
+import {toast, ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios';
+import {UserContext} from '../../context/UserContext';
+import {AUTH_API_PATH} from "./apiPath";
+
 
 
 
 const Register = () => {
-    const [username, setUsername] = useState('');
+    const [name, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [email,setEamil] = useState('')
+   
+    
+
+    const navigate = useNavigate()
   
     const handleRegister = (event) => {
       event.preventDefault();
-      // handle register logic here
+      const role = 0
+           axios.post("http://localhost:9090/api/register", {
+                email,
+                name,
+                password,
+                role
+            }).then(() => {
+                navigate('/login')
+                toast.success("Success !")
+            }).catch(() => {
+                toast.error("Error !");
+            })
+        
+      
     };
+
     return (
       <div>
       <div className='header'>
@@ -31,11 +56,11 @@ const Register = () => {
     <form onSubmit={handleRegister}>
     <label className='inputs' placeholder='Enter your full name'  >
       <span className='xs'>Full name</span>
-        <input className='in' type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
+        <input className='in' type="text" value={name} onChange={(e) => setUsername(e.target.value)} />
       </label> 
       <label className='inputs'>
       <span className='xs'>Email address</span>
-        <input className='in' type="text" value={email} onChange={(e) => setEamil(e.target.value)} />
+        <input className='in' type="email" value={email} onChange={(e) => setEamil(e.target.value)} />
       </label>
       <label className='inputs'>
         <div className='fgp'>

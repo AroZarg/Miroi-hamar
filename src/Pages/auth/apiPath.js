@@ -1,0 +1,1 @@
+export const AUTH_API_PATH = process.env.REACT_APP_API_URI+'/api'

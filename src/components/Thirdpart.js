@@ -1,13 +1,22 @@
 import { useState,useEffect } from "react";
 import choseF from "./../img/Chosefile.png"
 import Founders from "./Founders";
+import Stepper  from '@mui/material/Stepper';
+import Step from '@mui/material/Step';
+import StepLabel from '@mui/material/StepLabel';
+const steps = [
+  'Step1',
+  'Step2',
+  'Step3',
+];
+
 const Thirdpart = (props) => {
 
   const addElement = (element) => {
     setArray([...array, element]);
   }
   const onClickPlus=() => {addElement({onClick:onClickMinus})}
-  const [array, setArray] = useState([{onClick:onClickPlus}]);
+  const [array, setArray] = useState([]);
 
   const removeElement = (index) => {
     const newArray = [...array];
@@ -17,8 +26,22 @@ const Thirdpart = (props) => {
 
   const onClickMinus=()=>{removeElement(1)}
 
-    return (   
+    return (  
+      <>
+      <div className='container'>
+      <div className='pageName'>
+      <h1 className='headerName'>Application</h1>
+      <Stepper className='steps' activeStep={2} alternativeLabel>
+        {steps.map((label) => (
+          <Step key={label}>
+            <StepLabel>{label}</StepLabel>
+          </Step>
+        ))}
+      </Stepper>
+   </div>
+     
     <form classname="form"onSubmit={props.handleAddApplication}>
+      <Founders onClick={onClickPlus}/>
        {array.map((i)=> (<Founders onClick={i.onClick}/>))
        } 
     <label className="inputs">
@@ -50,7 +73,10 @@ const Thirdpart = (props) => {
      </div>
     </div>
     <button className='btn' type="submit">Apply</button>
-  </form>);
+  </form>
+  </div>     
+  </>
+  );
 }
  
 export default Thirdpart;
